@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>COMPILER DESIGN</title>
+
+</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<body>
+
+<h1 style="text-align: center;">COMPILER DESIGN</h1>
+
+<h1>Procedure Expression for handling general expressions with a loop:</h1>
+<p><img src="image1.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>style="text-decoration:underline;>General expressions in the Backus Naur Format (BNF) can be represented as (expression) ::= (term) [(addop) (term)]* , and the code on the above code is the one used to handle general expressions only one line was added to the code which is a loop for n number of expressions, before we dealt with the procedure expression that work for binary expressions.</p>
+
+
+<h3>General Expression test run:</h3>
+
+<p><img src="image2.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>and now we look at the test run of procedure Expression code with legal expre and no error messages are shown.</p>
+
+ssions using TURBO command to run the Cradle.pas file, to show that the code successfully accomplishes the task the line EmitLn is what appears in the DosBox,
+<h3>General Expression test run with illegal expression:</h3>
+
+<p><img src="image3.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>now we check test runs for illegal expressions and from the error message displayed we can see that the compiler reads the first expression and its what we are looking for thus the EmitLn code now takes action, and then it checks the second expression and finds that the expression is illegal and error message appears then the program terminates.</p>
+
+<h1>Using the Stack:</h1>
+
+<p><img src="image4.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>Modern Processors contains a stack, and for a translator to use stack assembler codes for push -(SP) and pop (SP)+, these codes are added to procedures Add, Sub and Expression.</p>
+
+<h3>Test run for stack:</h3>
+<p><img src="image5.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>Now we test run for stack using any number of terms, and the legal expression ‘1+2-5’ is what we chose to use, the program then reads the expressions and in the display messages, where we see –(SP) it means the stored value is being pushed into a stack and where (SP)+ appears then it shows that the value has been popped  from the stack.</p>
+
+<h1>Multiplication and Division:</h1>
+<p><img src="image6.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>Factor is a term (term) ::= (factor) [ (mulop) (factor) ]*  from the expression , and then we added the procedure multiply to tell the translator to recognize multiplication and for general expressions. The same thing is done for the procedure Divide for recognizing division. Notice the EmitLn code has Test run for multiplication of expressions for legal and illegal expressionsstack, meaning the procedures will use stacks.  (term) ::= (factor) [ (mulop) (factor) ]* now to implement the parser for multiplication and division work in with general expression , using while loop.</p>
+
+<h3>Test run for multiplication of expressions for legal and illegal expressions</h3>
+
+<p><img src="image7.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>test run for multiplication using legal expression and including the ‘*’ in our expression and when we run the EmitLn executes, thus the program shows no error messages. Now for test run using illegal Expression the translator displays error messages , meaning our translator only recognize integers, thus generating error messages.
+
+</p>
+
+<h3>Test run for Division for legal and illegal expression:</h3>
+
+<p><img src="image8.jpg" height="40%" width="30%" border="2px" alt=""></p>
+
+<p>The first part is a test run for division for legal general expressions, and no error messages appears , the messages that appear in the DOSBox it is the EmitLn from the code and these messages also prove that the program works accordingly, including the line -(SP) and (SP+) which allows the translator to use a stack. The second part is a test run for illegal expressions, and we see that there is a generated error message, implying that the translator does not recognize those illegal expressions.</p>
+
+<h1>Parsing Parentheses:</h1>
+
+<p><img src="image9.jpg" height="40%" width="30%" border="2px" alt=""></p>
+<p>The above is the implementation of a code that tells our to recognize parentheses, for evaluating general expression.</p>
+
+We then tested the parentheses expression using the following expression (4+5) * 2(3-1), and the parentheses force the addition before the multiply. Much more importantly, though, parentheses give us a mechanism for defining expressions of any degree of complexity.
+
+</p>
+
+<footer class = "MainFooter">
+	<p>to show the parse code click here <a href="link_To_compiler.html" title="compiler">Compiler<a/></p>
+</footer>
+
+</body>
+</html>
